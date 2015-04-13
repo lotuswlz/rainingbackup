@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/list_item_horizontal_padding"
+    android:paddingRight="@dimen/list_item_horizontal_padding"
+    android:paddingTop="@dimen/list_item_vertical_padding"
+    android:paddingBottom="@dimen/list_item_vertical_padding"
+    android:orientation="vertical"
+    android:id="@+id/conversation_shortcut_view"
+    android:onClick="onDisplayConversation"
+    tools:context="com.thoughtworks.cathywu.smsbackup.ui.SmsListActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@drawable/blue"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_sms_date"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_sms_contact_name"
+        android:layout_toLeftOf="@id/tv_sms_date"
+        android:layout_alignParentLeft="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@drawable/brown"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_sms_date"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_sms_count"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_below="@id/tv_sms_contact_name"
+        android:layout_toLeftOf="@id/tv_sms_count"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_sms_short_content"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_sms_phone"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

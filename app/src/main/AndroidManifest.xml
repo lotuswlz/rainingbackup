@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thoughtworks.cathywu.smsbackup"
+    android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ExportActivity"
+            android:label="@string/title_activity_export" >
+        </activity>
+        <activity
+            android:name=".ui.SmsListActivity"
+            android:label="@string/title_activity_sms_list" >
+        </activity>
+        <activity
+            android:name=".ui.ConversationDetailActivity"
+            android:label="@string/title_activity_conversation_detail" >
+        </activity>
+    </application>
+
+</manifest>
